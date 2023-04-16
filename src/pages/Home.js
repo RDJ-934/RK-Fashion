@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 
-import ProductProvider, { ProductContext } from '../contexts/ProductContext';
+import { ProductContext } from '../contexts/ProductContext';
 import Product from '../components/Product';
 
 import Hero from '../components/Hero';
@@ -10,7 +10,7 @@ const Home = () => {
   const { products } = useContext(ProductContext);
 
   const filteredProducts = products.filter(item => {
-    return (item.category === "men's clothing" || item.category === "women's clothing"
+    return (item.category === "men's clothing" || item.category === "women's clothing" 
     );
   });
   return (
